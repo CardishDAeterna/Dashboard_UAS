@@ -209,11 +209,27 @@ def tampilkan_kesimpulan_akhir(p_val, alpha):
             st.info(penjelasan)
 
 # Menu Navigasi Utama
+menu1 = st.sidebar.selectbox(
+    'Pilih kategori',
+    (
+        'Halaman Utama',
+        'Kategorikal',
+        'Numerik'
+    )
+)
+
+if menu1 = 'Kategorikal':
 menu = st.sidebar.selectbox(
     "Pilih Jenis Uji:",
     (
-        "Halaman Utama (Flowchart)",
         "Uji Proporsi (1 & 2 Sampel)",
+    )
+)
+
+elif menu1 = 'Numerik':
+menu = st.sidebar.selectbox(
+    "Pilih Jenis Uji:",
+    (
         "Uji Rata-rata 1 Sampel",
         "Uji Rata-rata 2 Sampel Independen (Uji Z)",
         "Uji Kesamaan Varians (F-test)",
@@ -252,7 +268,7 @@ st.sidebar.info("Aplikasi ini menyediakan penjelasan, rumus, contoh, dan kalkula
 # ==========================================
 # 2. HALAMAN BERANDA (FLOWCHART)
 # ==========================================
-if menu == "Halaman Utama (Flowchart)":
+if menu1 == "Halaman Utama (Flowchart)":
     st.title("Sistem Pemilihan Uji Statistik")
     st.write("Alur Aplikasi ini berdasarkan Flowchart di bawah sehingga gunakan flowchart di bawah ini untuk menentukan uji yang tepat.")
 
@@ -2133,4 +2149,5 @@ elif menu == "Uji Rata-rata 2 Sampel Dependen (Paired t-test)":
         st.write("Flowchart referensi untuk Uji Rata-rata 2 Sampel Dependen (Paired t-test)")
         url = "https://drive.google.com/file/d/1Py2T6DLhHoGteB8rlgC3cmT5ipgB-KlN/preview"
         st.components.v1.iframe(url, width=800, height=1000)
+
 
