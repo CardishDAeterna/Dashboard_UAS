@@ -277,7 +277,7 @@ if menu1 == "Halaman Utama (Flowchart)":
     except:
         st.error("Link gambar flowchart juga mungkin salah.")
 # 1) Uji Proporsi 1 Sampel
-elif "Uji Proporsi" in menu:
+elif "Uji Proporsi (1 & 2 Sampel)" in menu:
 
         # --- Session State ---
     if 'hasil_1_sampel' not in st.session_state:
@@ -2149,6 +2149,7 @@ elif menu == "Uji Rata-rata 2 Sampel Dependen (Paired t-test)":
         st.write("Flowchart referensi untuk Uji Rata-rata 2 Sampel Dependen (Paired t-test)")
         url = "https://drive.google.com/file/d/1Py2T6DLhHoGteB8rlgC3cmT5ipgB-KlN/preview"
         st.components.v1.iframe(url, width=800, height=1000)
+
 
 
 
