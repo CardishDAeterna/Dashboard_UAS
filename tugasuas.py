@@ -218,26 +218,7 @@ menu1 = st.sidebar.selectbox(
     )
 )
 
-if menu1 == 'Kategorikal':
-    menu2 = st.sidebar.selectbox(
-    "Pilih Jenis Uji:",
-    (
-        "Uji Proporsi (1 & 2 Sampel)",
-    )
-)
 
-elif menu1 == 'Numerik':
-    menu = st.sidebar.selectbox(
-    "Pilih Jenis Uji:",
-    (
-        "Uji Rata-rata 1 Sampel",
-        "Uji Rata-rata 2 Sampel Independen (Uji Z)",
-        "Uji Kesamaan Varians (F-test)",
-        "Uji Rata-rata 2 Sampel Independen (Pooled t-test)",
-        "Uji Rata-rata 2 Sampel Independen (Welch t-test)",
-        "Uji Rata-rata 2 Sampel Dependen (Paired t-test)"
-    )
-)
 
 st.sidebar.markdown("""
     <div style='background:rgba(0,40,80,0.6);
@@ -276,6 +257,27 @@ if menu1 == "Halaman Utama (Flowchart)":
         st.image(url_flowchart, caption="Flowchart")
     except:
         st.error("Link gambar flowchart juga mungkin salah.")
+
+elif menu1 == 'Kategorikal':
+    menu2 = st.sidebar.selectbox(
+    "Pilih Jenis Uji:",
+    (
+        "Uji Proporsi (1 & 2 Sampel)",
+    )
+)
+
+elif menu1 == 'Numerik':
+    menu = st.sidebar.selectbox(
+    "Pilih Jenis Uji:",
+    (
+        "Uji Rata-rata 1 Sampel",
+        "Uji Rata-rata 2 Sampel Independen (Uji Z)",
+        "Uji Kesamaan Varians (F-test)",
+        "Uji Rata-rata 2 Sampel Independen (Pooled t-test)",
+        "Uji Rata-rata 2 Sampel Independen (Welch t-test)",
+        "Uji Rata-rata 2 Sampel Dependen (Paired t-test)"
+    )
+)
 # 1) Uji Proporsi 1 Sampel
 elif menu2 == "Uji Proporsi (1 & 2 Sampel)":
 
@@ -2149,6 +2151,7 @@ elif menu == "Uji Rata-rata 2 Sampel Dependen (Paired t-test)":
         st.write("Flowchart referensi untuk Uji Rata-rata 2 Sampel Dependen (Paired t-test)")
         url = "https://drive.google.com/file/d/1Py2T6DLhHoGteB8rlgC3cmT5ipgB-KlN/preview"
         st.components.v1.iframe(url, width=800, height=1000)
+
 
 
 
