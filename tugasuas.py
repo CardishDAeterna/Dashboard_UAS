@@ -219,7 +219,7 @@ menu1 = st.sidebar.selectbox(
 )
 
 if menu1 == 'Kategorikal':
-menu = st.sidebar.selectbox(
+    menu = st.sidebar.selectbox(
     "Pilih Jenis Uji:",
     (
         "Uji Proporsi (1 & 2 Sampel)",
@@ -227,7 +227,7 @@ menu = st.sidebar.selectbox(
 )
 
 elif menu1 == 'Numerik':
-menu = st.sidebar.selectbox(
+    menu = st.sidebar.selectbox(
     "Pilih Jenis Uji:",
     (
         "Uji Rata-rata 1 Sampel",
@@ -2149,6 +2149,7 @@ elif menu == "Uji Rata-rata 2 Sampel Dependen (Paired t-test)":
         st.write("Flowchart referensi untuk Uji Rata-rata 2 Sampel Dependen (Paired t-test)")
         url = "https://drive.google.com/file/d/1Py2T6DLhHoGteB8rlgC3cmT5ipgB-KlN/preview"
         st.components.v1.iframe(url, width=800, height=1000)
+
 
 
 
